@@ -418,6 +418,7 @@ section { position: relative; z-index: 2; padding: 100px 60px; }
 .project-card::before {
   content: ''; position: absolute; inset: 0;
   background: var(--glow); opacity: 0; transition: opacity 0.3s;
+  pointer-events: none;
 }
 
 .project-card:hover { background: var(--surface); }

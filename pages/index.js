@@ -373,12 +373,7 @@ export default function Home() {
               <div className="proj-tech">
                 {["React.js","Go","WebSocket","Redis","PostgreSQL"].map((t) => <span key={t}>{t}</span>)}
               </div>
-              <button
-                className="proj-link"
-                onClick={() => window.open("http://chess-frontend-sayak.s3-website.ap-south-1.amazonaws.com", "_blank")}
-              >
-                Visit this website ↗
-              </button>
+              <a href="http://chess-frontend-sayak.s3-website.ap-south-1.amazonaws.com" target="_blank" rel="noopener noreferrer" className="proj-link">Visit this website ↗</a>
             </div>
 
             <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>
@@ -391,12 +386,13 @@ export default function Home() {
               <div className="proj-tech">
                 {["Go","Redis","PostgreSQL","React.js","REST APIs"].map((t) => <span key={t}>{t}</span>)}
               </div>
-              <button
+              <a
                 className="proj-link"
-                onClick={() => window.open("https://github.com/SayakDe98/url-shortner")}
+                href="https://github.com/SayakDe98/url-shortner"
+                target="_blank" rel="noopener noreferrer"
               >
                 Check out the Code on GitHub ↗
-              </button>
+              </a>
             </div>
           </div>
 
