@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Syne, DM_Mono, Instrument_Serif } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
@@ -23,6 +23,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     // Custom cursor
     const cursor = document.getElementById("cursor");
@@ -122,7 +123,26 @@ export default function Home() {
             <li><a href="#leetcode">DSA</a></li>
             <li><a href="#contact" className="nav-cta">Hire Me</a></li>
           </ul>
+          <button
+            className={`nav-hamburger ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </nav>
+
+        {/* MOBILE MENU */}
+        {menuOpen && (
+          <div className="mobile-menu">
+            {["#about", "#experience", "#projects", "#leetcode"].map((href) => (
+              <a key={href} href={href} onClick={() => setMenuOpen(false)}>
+                {href.replace("#", "").replace("projects", "Personal Projects")}
+              </a>
+            ))}
+            <a href="#contact" className="nav-cta" onClick={() => setMenuOpen(false)}>Hire Me</a>
+          </div>
+        )}
 
         {/* HERO */}
         <section id="hero">
@@ -353,7 +373,12 @@ export default function Home() {
               <div className="proj-tech">
                 {["React.js","Go","WebSocket","Redis","PostgreSQL"].map((t) => <span key={t}>{t}</span>)}
               </div>
-              <div className="proj-arrow">↗</div>
+              <button
+                className="proj-link"
+                onClick={() => window.open("http://chess-frontend-sayak.s3-website.ap-south-1.amazonaws.com", "_blank")}
+              >
+                Visit this website ↗
+              </button>
             </div>
 
             <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>
@@ -366,7 +391,12 @@ export default function Home() {
               <div className="proj-tech">
                 {["Go","Redis","PostgreSQL","React.js","REST APIs"].map((t) => <span key={t}>{t}</span>)}
               </div>
-              <div className="proj-arrow">↗</div>
+              <button
+                className="proj-link"
+                onClick={() => window.open("https://github.com/SayakDe98/url-shortner")}
+              >
+                Check out the Code on GitHub ↗
+              </button>
             </div>
           </div>
 
