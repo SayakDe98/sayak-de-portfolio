@@ -560,3 +560,6 @@ footer p { color: var(--muted); font-size: 11px; letter-spacing: 0.08em; }
   .float-tag { display: none; }
   footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
 }
+.marquee-item:after {
+  content: ''
+}
