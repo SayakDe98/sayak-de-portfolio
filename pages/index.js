@@ -524,7 +524,7 @@ export default function Home() {
 
         {/* FOOTER */}
         <footer>
-          <p>© {new Date().getFullYear()} Sayak De. Built with Next.js + Framer Motion.</p>
+          <p>© {new Date().getFullYear()} Sayak De. Built with Next.js</p>
           <p>Howrah, India · sayakde777@gmail.com</p>
         </footer>
       </div>
