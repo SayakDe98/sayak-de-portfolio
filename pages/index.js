@@ -236,7 +236,7 @@ export default function Home() {
                   { name: "Go (Golang)",           pct: 85 },
                   { name: "Node.js / REST APIs",   pct: 88 },
                   { name: "AWS / Cloud",           pct: 75 },
-                  { name: "PostgreSQL / MongoDB",  pct: 80 },
+                  { name: "MySQL / MongoDB",  pct: 80 },
                 ].map(({ name, pct }) => (
                   <div key={name} className="skill-bar-wrap">
                     <div className="skill-bar-meta">
@@ -252,11 +252,11 @@ export default function Home() {
 
               <div className="skills-grid">
                 {[
-                  { cat: "Frontend",      tags: ["HTML/CSS","React","Vue.js","JS/TS"] },
+                  { cat: "Frontend",      tags: ["HTML/CSS","React","Vue.js","JavaScript","TypeScript"] },
                   { cat: "Backend",       tags: ["Go","Node.js","GraphQL","WebSocket","REST APIs"] },
                   { cat: "Data",          tags: ["PostgreSQL","MongoDB","MySQL","Redis"] },
                   { cat: "Tools",         tags: ["AWS","Git","Jira","Webpack"] },
-                  { cat: "Analytics & AI",tags: ["Google Analytics","WebEngage","Gen AI","Automation Scripts"] },
+                  { cat: "Analytics & AI",tags: ["Google Analytics","WebEngage","Gen AI","Automation Scripts", "Python"] },
                 ].map(({ cat, tags }) => (
                   <div key={cat} className="skill-category">
                     <div className="skill-cat-name">{cat}</div>
@@ -282,67 +282,47 @@ export default function Home() {
             {/* Nua */}
             <div className="tl-item reveal">
               <div className="tl-dot"></div>
-              <div className="tl-meta">
-                <div>
+              <div className="tl-header">
+                <div className="tl-left">
                   <div className="tl-company">Nua</div>
                   <div className="tl-role">Software Engineer Developer – I</div>
                 </div>
                 <div className="tl-date">Oct 2024 – Present · Remote</div>
               </div>
               <ul className="tl-bullets">
-                <li>Designed &amp; shipped a <strong>Period Tracker</strong> feature (full-stack in React + Go)
-                  with automated communication workflows — so impactful it went unexpectedly viral within
-                  the platform and was <strong>personally recognized by the CEO</strong> in a company-wide
-                  discussion. <span className="impact-badge">+20% engagement</span></li>
-                <li>Integrated <strong>Redis caching</strong> for Collection Page data, improving{" "}
-                  <strong>DebugBear performance score by 24%</strong> and fixing all pre-existing page
-                  errors — resulting in a measurable boost to website engagement.</li>
-                <li>Revamped the <strong>My Orders page</strong> with refund initiation, status tracking,
-                  and Reorder capability — improving post-purchase UX significantly.</li>
-                <li>Delivered a redesigned <strong>Collection Page</strong> with updated pricing logic;
-                  improved conversion clarity and eliminated all existing UI errors.</li>
-                <li>Implemented <strong>Out-of-Stock recommendations</strong> within subscription plans,
-                  reducing user drop-off.</li>
-                <li>Optimized image delivery via <strong>CDN best practices</strong>, significantly cutting
-                  monthly infrastructure costs. <span className="impact-badge">₹1L/month saved</span></li>
-                <li>Leveraged <strong>Google Analytics</strong> and <strong>WebEngage</strong> for behavioral
-                  tracking and targeted user communication workflows.</li>
-                <li>Built <strong>automation scripts</strong> to streamline internal workflows and reduce
-                  manual engineering overhead.</li>
-                <li>Mentored junior developers and interns on best practices, code quality, and system
-                  design fundamentals.</li>
+                <li>Designed &amp; shipped a <strong>Period Tracker</strong> feature (full-stack in React + Go) with automated communication workflows — went unexpectedly viral and was <strong>personally recognized by the CEO</strong> in a company-wide discussion. <span className="impact-badge">+20% engagement</span></li>
+                <li>Integrated <strong>Redis caching</strong> for Collection Page data, improving <strong>DebugBear performance score by 24%</strong> and fixing all pre-existing page errors. <span className="impact-badge">+24% perf</span></li>
+                <li>Revamped the <strong>My Orders page</strong> with refund initiation, status tracking, and Reorder capability — improving post-purchase UX significantly.</li>
+                <li>Delivered a redesigned <strong>Collection Page</strong> with updated pricing logic; improved conversion clarity and eliminated all existing UI errors.</li>
+                <li>Implemented <strong>Out-of-Stock recommendations</strong> within subscription plans, reducing user drop-off.</li>
+                <li>Optimized image delivery via <strong>CDN best practices</strong>, significantly cutting monthly infrastructure costs. <span className="impact-badge">₹1L/month saved</span></li>
+                <li>Leveraged <strong>Google Analytics</strong> and <strong>WebEngage</strong> for behavioral tracking and targeted user communication workflows.</li>
+                <li>Built <strong>automation scripts</strong> to streamline internal workflows and reduce manual engineering overhead.</li>
+                <li>Mentored junior developers and interns on best practices, code quality, and system design fundamentals.</li>
               </ul>
             </div>
 
             {/* Thinkitive */}
             <div className="tl-item reveal reveal-delay-1">
               <div className="tl-dot"></div>
-              <div className="tl-meta">
-                <div>
+              <div className="tl-header">
+                <div className="tl-left">
                   <div className="tl-company">Thinkitive Technologies</div>
                   <div className="tl-role">Software Engineer</div>
                 </div>
                 <div className="tl-date">Jun 2022 – Sep 2024 · Pune</div>
               </div>
               <ul className="tl-bullets">
-                <li>Enhanced ReactJs UI with multilingual video captions, charts, and stepper forms.{" "}
-                  <span className="impact-badge">+35% engagement</span></li>
-                <li>Built Go APIs that cut client-side loading times by 30%.{" "}
-                  <span className="impact-badge">-30% load time</span></li>
+                <li>Enhanced ReactJs UI with multilingual video captions, charts, and stepper forms. <span className="impact-badge">+35% engagement</span></li>
+                <li>Built Go APIs that cut client-side loading times by 30%. <span className="impact-badge">-30% load time</span></li>
                 <li>Implemented <strong>Voice Search</strong>, boosting navigation participation by 40%.</li>
                 <li>Strengthened auth with <strong>JWT tokens</strong> and granular role-based access control.</li>
-                <li>Integrated <strong>live chat</strong> to increase user activity and implemented RBAC
-                  permissions. <span className="impact-badge">+25% activity</span></li>
-                <li>Built a timezone-flexible event booking API.{" "}
-                  <span className="impact-badge">+20% activity</span></li>
-                <li>Developed <strong>Stripe payment integration</strong> backend, reducing transaction
-                  failures by 25%.</li>
-                <li>Wrote <strong>automation scripts</strong> to reduce repetitive manual processes and
-                  speed up team workflows.</li>
-                <li>Applied <strong>Generative AI</strong> knowledge to prototype intelligent features and
-                  accelerate development cycles.</li>
-                <li>Mentored junior developers and interns through code reviews and hands-on
-                  knowledge-sharing sessions.</li>
+                <li>Integrated <strong>live chat</strong> to increase user activity and implemented RBAC permissions. <span className="impact-badge">+25% activity</span></li>
+                <li>Built a timezone-flexible event booking API. <span className="impact-badge">+20% activity</span></li>
+                <li>Developed <strong>Stripe payment integration</strong> backend, reducing transaction failures by 25%.</li>
+                <li>Wrote <strong>automation scripts</strong> to reduce repetitive manual processes and speed up team workflows.</li>
+                <li>Applied <strong>Generative AI</strong> knowledge to prototype intelligent features and accelerate development cycles.</li>
+                <li>Mentored junior developers and interns through code reviews and hands-on knowledge-sharing sessions.</li>
               </ul>
             </div>
           </div>
@@ -364,8 +344,10 @@ export default function Home() {
 
           <div className="projects-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
             <div className="project-card reveal" style={{ position: "relative", overflow: "hidden" }}>
-              <div className={styles.badgeGreen}>In Progress</div>
-              <div className="proj-num">01 — Active</div>
+              <div className="proj-first-line">
+                <div className="proj-num">01 — Active</div>
+                <div className={styles.badgeGreen}>Deployed</div>
+              </div>
               <div className="proj-title">Chess Gambit</div>
               <div className="proj-desc">A full-featured online chess game with real-time multiplayer, move
                 validation, and gambit opening analysis. Built with WebSocket for live board sync, with
@@ -377,8 +359,10 @@ export default function Home() {
             </div>
 
             <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>
-              <div className={styles.badgePurple}>In Progress</div>
-              <div className="proj-num">02 — Active</div>
+              <div className="proj-first-line">
+                <div className="proj-num">02 — Active</div>
+                <div className={styles.badgePurple}>In Progress</div>
+              </div>
               <div className="proj-title">URL Shortener</div>
               <div className="proj-desc">A high-performance URL shortening service with custom aliases, click
                 analytics, expiry management, and a clean dashboard. Engineered for speed — Redis-backed
@@ -412,7 +396,7 @@ export default function Home() {
             <div className="section-line"></div>
           </div>
 
-          <div className="oss-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)", maxWidth: "900px" }}>
+          <div className="oss-grid" style={{ width: "100%" }}>
             <div className="oss-card reveal" style={{ gridColumn: "span 2", borderColor: "rgba(0,179,122,0.2)", background: "rgba(0,179,122,0.03)" }}>
               <div className="oss-header">
                 <span className="oss-icon">🍞</span>
@@ -457,7 +441,7 @@ export default function Home() {
           </div>
 
           <div style={{ display: "flex", alignItems: "flex-end", gap: "20px", marginBottom: "32px" }} className="reveal">
-            <div style={{ background: "var(--card)", border: "1px solid var(--border)", padding: "28px 36px", borderRadius: "4px", textAlign: "center", minWidth: "160px" }}>
+            <div style={{ background: "var(--card)", border: "1px solid var(--border)", padding: "28px 36px", borderRadius: "4px", textAlign: "center", minWidth: "160px", width: "100%" }}>
               <div className="lc-stat-num" style={{ fontFamily: "var(--font-syne)", fontSize: "48px", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>300+</div>
               <div className="lc-stat-label" style={{ fontSize: "11px", color: "var(--muted)", letterSpacing: "0.08em", marginTop: "8px" }}>Problems Solved</div>
             </div>
