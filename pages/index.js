@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { Syne, DM_Mono, Instrument_Serif } from "next/font/google";
+import { Syne, Open_Sans, Instrument_Serif } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 const syne = Syne({
@@ -9,10 +9,10 @@ const syne = Syne({
   variable: "--font-syne",
 });
 
-const dmMono = DM_Mono({
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
-  variable: "--font-dm-mono",
+  variable: "--font-open-sans",
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -109,7 +109,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={`${syne.variable} ${dmMono.variable} ${instrumentSerif.variable}`}>
+      <div className={`${syne.variable} ${openSans.variable} ${instrumentSerif.variable}`}>
         <div id="cursor"></div>
         <div id="cursor-trail"></div>
 
@@ -462,12 +462,7 @@ export default function Home() {
 
           <div style={{ marginTop: "40px", maxWidth: "700px" }} className="reveal reveal-delay-2">
             <p style={{ color: "var(--muted)", fontSize: "13px", lineHeight: "1.9" }}>
-              Consistent problem solver with a focus on pattern recognition over memorization. Strong
-              emphasis on <strong style={{ color: "var(--text)" }}>Sliding Window</strong>,{" "}
-              <strong style={{ color: "var(--text)" }}>Monotonic Stack/Deque</strong>,{" "}
-              <strong style={{ color: "var(--text)" }}>Binary Search</strong>, and{" "}
-              <strong style={{ color: "var(--text)" }}>Dynamic Programming</strong> — always reasoning
-              through time and space complexity tradeoffs from brute-force to optimal.
+              Consistent problem solver with a focus on pattern recognition over memorization.
             </p>
             <div style={{ marginTop: "20px" }}>
               <a href="https://leetcode.com/u/SayakDe98/" target="_blank" rel="noopener noreferrer"
