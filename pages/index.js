@@ -314,7 +314,7 @@ export default function Home() {
               </div>
               <ul className="tl-bullets">
                 <li>Enhanced ReactJs UI with multilingual video captions, charts, and stepper forms. <span className="impact-badge">+35% engagement</span></li>
-                <li>Built Go APIs that cut client-side loading times by 30%. <span className="impact-badge">-30% load time</span></li>
+                <li>Built Go and Node.js APIs that cut client-side loading times by 30%. <span className="impact-badge">-30% load time</span></li>
                 <li>Implemented <strong>Voice Search</strong>, boosting navigation participation by 40%.</li>
                 <li>Strengthened auth with <strong>JWT tokens</strong> and granular role-based access control.</li>
                 <li>Integrated <strong>live chat</strong> to increase user activity and implemented RBAC permissions. <span className="impact-badge">+25% activity</span></li>
