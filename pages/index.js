@@ -104,7 +104,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sayak De — Full Stack Engineer</title>
-        <meta name="description" content="Full Stack Engineer — Frontend · Backend · Cloud" />
+        <meta name="description" content="Frontend-led Fullstack Software Engineer · React · Vue.js · Go · AWS" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -147,25 +147,25 @@ export default function Home() {
         {/* HERO */}
         <section id="hero">
           <div className="hero-glow"></div>
-          <div className="float-tag float-tag-1"><span className="dot"></span>React.js</div>
+          <div className="float-tag float-tag-1"><span className="dot"></span>Vue.js 3 / React</div>
           <div className="float-tag float-tag-2"><span className="dot"></span>Go</div>
           <div className="float-tag float-tag-3"><span className="dot"></span>AWS</div>
 
           <div className="hero-inner">
             <div className="hero-tag">Available for opportunities</div>
             <h1 className="hero-name">Sayak<br /><em>De</em></h1>
-            <p className="hero-subtitle">Full Stack Engineer — Frontend · Backend · Cloud</p>
+            <p className="hero-subtitle">Frontend-led Fullstack Engineer — React · Vue.js · Go · AWS</p>
             <p className="hero-desc">
-              3+ years building high-impact web products at scale. I craft performant
-              full-stack systems with ReactJs, Go, NodeJs, and AWS — from pixel-perfect
-              UIs to reliable backend APIs.
+              3+ years building high-impact web products at scale. I craft secure, performant
+              full-stack systems with Vue.js 3, React, Go, and AWS — from pixel-perfect UIs
+              to reliable backend APIs and payment systems.
             </p>
             <div className="hero-stats">
               {[
                 { num: "3+",    label: "Years of Experience" },
-                { num: "40%",   label: "Load Time Reduction" },
-                { num: "99.9%", label: "System Uptime" },
-                { num: "25%",   label: "User Engagement Boost" },
+                { num: "24pts", label: "DebugBear Score Lift" },
+                { num: "+20%",  label: "MAU Growth (Period Tracker)" },
+                { num: "₹1L",   label: "Monthly Cloud Savings" },
               ].map(({ num, label }) => (
                 <div key={label}>
                   <div className="hero-stat-num">{num}</div>
@@ -191,10 +191,10 @@ export default function Home() {
         <div className="marquee-wrap">
           <div className="marquee-track">
             {[
-              "React.js","Go (Golang)","Node.js","Vue.js","TypeScript",
-              "AWS S3","PostgreSQL","MongoDB","Redis","GraphQL","WebSocket","REST APIs",
-              "React.js","Go (Golang)","Node.js","Vue.js","TypeScript",
-              "AWS S3","PostgreSQL","MongoDB","Redis","GraphQL","WebSocket","REST APIs",
+              "Vue.js 3","React.js","Go (Golang)","Node.js","TypeScript","Next.js","Nuxt 3",
+              "AWS CloudFront","Redis","PostgreSQL","GraphQL","WebSocket","Juspay","Stripe","Sentry","Docker",
+              "Vue.js 3","React.js","Go (Golang)","Node.js","TypeScript","Next.js","Nuxt 3",
+              "AWS CloudFront","Redis","PostgreSQL","GraphQL","WebSocket","Juspay","Stripe","Sentry","Docker",
             ].map((item, i) => (
               <div key={i} className="marquee-item">{item}</div>
             ))}
@@ -210,17 +210,16 @@ export default function Home() {
           </div>
           <div className="about-grid">
             <div className="about-text reveal">
-              <p>Hi, I&apos;m <strong>Sayak De</strong> — a Full Stack Engineer based in Howrah, India,
-                with over 3 years of experience building scalable web applications. I graduated with a
+              <p>Hi, I&apos;m <strong>Sayak De</strong> — a Frontend-led Fullstack Software Engineer based in Howrah, India,
+                with 3+ years of production experience building secure, scalable web applications. I graduated with a
                 B.Tech in Applied Electronics and Instrumentation Engineering from Netaji Subhash
                 Engineering College, Kolkata in 2021.</p>
-              <p>I specialize in crafting end-to-end solutions — from building intuitive React/Vue
-                frontends to engineering performant Go &amp; Node.js backends. Currently at <strong>Nua</strong>,
-                I&apos;m driving product development including a period tracker feature that boosted
-                user engagement by 20%.</p>
-              <p>I believe in shipping code that <strong>actually moves metrics</strong>: reduced load
-                times by 40%, cut infrastructure costs by ₹1 lakh/month through CDN optimization, and
-                delivered major product updates 20% ahead of schedule.</p>
+              <p>I specialise in end-to-end delivery — from building intuitive Vue.js 3 / React frontends to engineering
+                performant Go &amp; Node.js backends. Deep expertise in payment systems (Razorpay→Juspay migration, Stripe),
+                CDN optimisation (AWS CloudFront, Gumlet), and frontend performance monitoring with Sentry.</p>
+              <p>I believe in shipping code that <strong>moves real metrics</strong>: lifted DebugBear scores by 24 points,
+                cut cloud spend by ₹1L/month, drove a viral feature to +20% MAU growth — and earned CEO recognition at
+                an all-hands meeting.</p>
               <div className="about-highlight">
                 <p>&quot;Passionate about elegant systems that balance developer experience with end-user delight.&quot;</p>
               </div>
@@ -232,11 +231,11 @@ export default function Home() {
                   Proficiency
                 </p>
                 {[
-                  { name: "React.js / Vue.js",    pct: 92 },
-                  { name: "Go (Golang)",           pct: 85 },
-                  { name: "Node.js / REST APIs",   pct: 88 },
-                  { name: "AWS / Cloud",           pct: 75 },
-                  { name: "MySQL / MongoDB",  pct: 80 },
+                  { name: "Vue.js 3 / React.js",   pct: 92 },
+                  { name: "Go (Golang)",            pct: 85 },
+                  { name: "Node.js / REST APIs",    pct: 88 },
+                  { name: "AWS / Cloud & CDN",      pct: 78 },
+                  { name: "PostgreSQL / Redis",     pct: 80 },
                 ].map(({ name, pct }) => (
                   <div key={name} className="skill-bar-wrap">
                     <div className="skill-bar-meta">
@@ -252,11 +251,14 @@ export default function Home() {
 
               <div className="skills-grid">
                 {[
-                  { cat: "Frontend",      tags: ["HTML/CSS","React","Vue.js","JavaScript","TypeScript"] },
-                  { cat: "Backend",       tags: ["Go","Node.js","GraphQL","WebSocket","REST APIs"] },
-                  { cat: "Data",          tags: ["PostgreSQL","MongoDB","MySQL","Redis"] },
-                  { cat: "Tools",         tags: ["AWS","Git","Jira","Webpack"] },
-                  { cat: "Analytics & AI",tags: ["Google Analytics","WebEngage","Gen AI","Automation Scripts", "Python"] },
+                  { cat: "Frontend",        tags: ["Vue.js 3","Nuxt 3","React.js","Next.js","TypeScript","TanStack Query","Zod","Storybook","WCAG"] },
+                  { cat: "Backend",         tags: ["Go","Node.js","GraphQL","WebSocket","RESTful APIs","PHP","Python"] },
+                  { cat: "Data",            tags: ["PostgreSQL","MongoDB","MySQL","Redis"] },
+                  { cat: "Payments",        tags: ["Juspay","Razorpay","Stripe"] },
+                  { cat: "Cloud & DevOps",  tags: ["AWS CloudFront","AWS S3","AWS Route53","Gumlet CDN","GitHub Actions","Docker"] },
+                  { cat: "Security",        tags: ["JWT","RBAC","Google OAuth","OWASP"] },
+                  { cat: "Monitoring",      tags: ["Sentry","DebugBear","Google Analytics","WebEngage","A/B Testing"] },
+                  { cat: "AI in Workflow",  tags: ["Claude","GitHub Copilot","Cursor","OpenAPI codegen"] },
                 ].map(({ cat, tags }) => (
                   <div key={cat} className="skill-category">
                     <div className="skill-cat-name">{cat}</div>
@@ -285,20 +287,21 @@ export default function Home() {
               <div className="tl-header">
                 <div className="tl-left">
                   <div className="tl-company">Nua</div>
-                  <div className="tl-role">Software Engineer Developer – I</div>
+                  <div className="tl-role">Software Engineer I — Frontend-Led Fullstack</div>
                 </div>
                 <div className="tl-date">Oct 2024 – Present · Remote</div>
               </div>
               <ul className="tl-bullets">
-                <li>Designed &amp; shipped a <strong>Period Tracker</strong> feature (full-stack in React + Go) with automated communication workflows — went unexpectedly viral and was <strong>personally recognized by the CEO</strong> in a company-wide discussion. <span className="impact-badge">+20% engagement</span></li>
-                <li>Integrated <strong>Redis caching</strong> for Collection Page data, improving <strong>DebugBear performance score by 24%</strong> and fixing all pre-existing page errors. <span className="impact-badge">+24% perf</span></li>
-                <li>Revamped the <strong>My Orders page</strong> with refund initiation, status tracking, and Reorder capability — improving post-purchase UX significantly.</li>
-                <li>Delivered a redesigned <strong>Collection Page</strong> with updated pricing logic; improved conversion clarity and eliminated all existing UI errors.</li>
-                <li>Implemented <strong>Out-of-Stock recommendations</strong> within subscription plans, reducing user drop-off.</li>
-                <li>Optimized image delivery via <strong>CDN best practices</strong>, significantly cutting monthly infrastructure costs. <span className="impact-badge">₹1L/month saved</span></li>
-                <li>Leveraged <strong>Google Analytics</strong> and <strong>WebEngage</strong> for behavioral tracking and targeted user communication workflows.</li>
-                <li>Built <strong>automation scripts</strong> to streamline internal workflows and reduce manual engineering overhead.</li>
-                <li>Mentored junior developers and interns on best practices, code quality, and system design fundamentals.</li>
+                <li><strong>Payment Gateway Migration:</strong> Partnered with Product, Design, and backend teams to migrate payment links from Razorpay to Juspay — re-architected the checkout API layer and updated the Nuxt 3 / Vue.js 3 payment flow; ensured <strong>zero downtime</strong> during cutover.</li>
+                <li><strong>Checkout Reliability:</strong> Implemented JWT-secured transaction APIs — improved transaction reliability and reduced payment failure rate post-launch.</li>
+                <li><strong>Period Tracker — Viral Feature:</strong> Designed and shipped full-stack Vue.js 3 + Go feature in close collaboration with Product and Design; drove <strong>+20% Monthly Active User (MAU)</strong> engagement within 30 days; <strong>recognised by CEO</strong> at all-hands meeting. <span className="impact-badge">+20% MAU</span></li>
+                <li><strong>Performance Triage &amp; Optimisation:</strong> Triaged and resolved Collection Page performance issues; instrumented Sentry for error reporting and applied Redis caching — <strong>lifted DebugBear score by 24 points</strong> in a single sprint. <span className="impact-badge">+24pts perf</span></li>
+                <li><strong>CDN Cost Reduction:</strong> Integrated Gumlet for image delivery with responsive width/height optimisation — cut monthly cloud spend by <strong>~₹1,00,000/month (~$1,200 USD)</strong>; deployed assets via AWS CloudFront and AWS Route53 for low-latency global delivery. <span className="impact-badge">₹1L/month saved</span></li>
+                <li><strong>Server-Side RESTful APIs:</strong> Designed and implemented server-side APIs with Next.js for internal tooling and storefront endpoints — improved data consistency and reduced client-server round-trips.</li>
+                <li><strong>Web Standards &amp; Architecture:</strong> Applied web components and island architecture for selective hydration — improved Time-to-Interactive and reduced unnecessary JavaScript execution on content-heavy pages.</li>
+                <li><strong>Subscription Flows &amp; Triage:</strong> Resolved drop-off issues in subscription flows; redesigned My Orders page and shipped Out-of-Stock recommendation engine — reduced upsell drop-off within 2 weeks; instrumented Google Analytics + WebEngage funnels informing 3 roadmap decisions.</li>
+                <li><strong>Mentorship &amp; Code Reviews:</strong> Mentored 2 junior engineers in Vue.js 3/React patterns, WCAG, and performance profiling; led weekly code-review sessions upholding software engineering best practices.</li>
+                <li><strong>Multicultural Collaboration:</strong> Collaborated daily with colleagues distributed across India via Slack and Confluence — navigating diverse working styles in an inclusive agile squad environment.</li>
               </ul>
             </div>
 
@@ -308,21 +311,20 @@ export default function Home() {
               <div className="tl-header">
                 <div className="tl-left">
                   <div className="tl-company">Thinkitive Technologies</div>
-                  <div className="tl-role">Software Engineer</div>
+                  <div className="tl-role">Software Engineer — Frontend &amp; Backend</div>
                 </div>
                 <div className="tl-date">Jun 2022 – Sep 2024 · Pune</div>
               </div>
               <ul className="tl-bullets">
-                <li>Enhanced ReactJs UI with multilingual video captions, charts, and stepper forms. <span className="impact-badge">+35% engagement</span></li>
-                <li>Built Go and Node.js APIs that cut client-side loading times by 30%. <span className="impact-badge">-30% load time</span></li>
-                <li>Implemented <strong>Voice Search</strong>, boosting navigation participation by 40%.</li>
-                <li>Strengthened auth with <strong>JWT tokens</strong> and granular role-based access control.</li>
-                <li>Integrated <strong>live chat</strong> to increase user activity and implemented RBAC permissions. <span className="impact-badge">+25% activity</span></li>
-                <li>Built a timezone-flexible event booking API. <span className="impact-badge">+20% activity</span></li>
-                <li>Developed <strong>Stripe payment integration</strong> backend, reducing transaction failures by 25%.</li>
-                <li>Wrote <strong>automation scripts</strong> to reduce repetitive manual processes and speed up team workflows.</li>
-                <li>Applied <strong>Generative AI</strong> knowledge to prototype intelligent features and accelerate development cycles.</li>
-                <li>Mentored junior developers and interns through code reviews and hands-on knowledge-sharing sessions.</li>
+                <li><strong>Vue.js &amp; React Frontend:</strong> Built and maintained complex UI features — multilingual video captions, interactive charts, stepper forms. Applied Storybook for component visualisation and UI testing. <span className="impact-badge">+35% engagement</span></li>
+                <li><strong>Performance Optimisation:</strong> Cut client-side load time by 30% by rewriting data-fetch orchestration in Go — replacing N+1 REST waterfalls with single batched API responses. <span className="impact-badge">-30% load time</span></li>
+                <li><strong>Payments Backend:</strong> Delivered Stripe payment integration end-to-end following software engineering best practices; reduced transaction failure rate by 25%.</li>
+                <li><strong>Voice Search:</strong> Implemented Voice Search in React UI — boosted search-feature participation by 40%, the largest single engagement increase of the year. <span className="impact-badge">+40% participation</span></li>
+                <li><strong>Scalable RESTful APIs:</strong> Engineered timezone-flexible event booking API (Go + PostgreSQL) — unlocked international user segments and increased booking activity by +20%.</li>
+                <li><strong>Security &amp; Auth:</strong> Hardened authentication with JWT + granular Role-Based Access Control (RBAC), eliminating privilege-escalation vulnerabilities flagged in security audit; aligned with OWASP standards.</li>
+                <li><strong>Product Issue Triage:</strong> Triaged and resolved product issues using LLM-assisted scaffolding and GitHub Actions CI/CD pipelines — compressed average ticket cycle time from 5 days to 3 days across the team.</li>
+                <li><strong>Real-Time Features:</strong> Integrated live-chat SDK — delivered a +25% rise in daily active interactions. <span className="impact-badge">+25% activity</span></li>
+                <li><strong>API Design:</strong> Designed RESTful APIs with Next.js and OpenAPI codegen for consistent, schema-driven development.</li>
               </ul>
             </div>
           </div>
@@ -346,36 +348,32 @@ export default function Home() {
             <div className="project-card reveal" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">01 — Active</div>
-                <div className={styles.badgeGreen}>Deployed</div>
+                <div className={styles.badgeGreen}>Live</div>
               </div>
               <div className="proj-title">Chess Gambit</div>
-              <div className="proj-desc">A full-featured online chess game with real-time multiplayer, move
-                validation, and gambit opening analysis. Built with WebSocket for live board sync, with
-                plans for an AI opponent and opening theory explorer.</div>
+              <div className="proj-desc">A full-featured real-time multiplayer chess platform with WebSocket-driven board synchronisation handling concurrent game sessions with sub-100ms move latency. Redis-backed session state for seamless reconnect, deployed on AWS S3 with CloudFront CDN delivery.</div>
               <div className="proj-tech">
-                {["React.js","Go","WebSocket","Redis","PostgreSQL"].map((t) => <span key={t}>{t}</span>)}
+                {["React.js","Go","WebSocket","Redis","PostgreSQL","AWS S3","CloudFront"].map((t) => <span key={t}>{t}</span>)}
               </div>
-              <a href="http://chess-frontend-sayak.s3-website.ap-south-1.amazonaws.com" target="_blank" rel="noopener noreferrer" className="proj-link">Visit this website ↗</a>
+              <a href="http://chess-frontend-sayak.s3-website.ap-south-1.amazonaws.com" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
             </div>
 
             <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">02 — Active</div>
-                <div className={styles.badgePurple}>In Progress</div>
+                <div className={styles.badgeGreen}>Live</div>
               </div>
               <div className="proj-title">URL Shortener</div>
-              <div className="proj-desc">A high-performance URL shortening service with custom aliases, click
-                analytics, expiry management, and a clean dashboard. Engineered for speed — Redis-backed
-                redirect resolution targeting sub-5ms latency.</div>
+              <div className="proj-desc">A high-performance URL shortening service achieving sub-5ms redirect resolution via Redis-first lookup with MySQL persistence. Features custom aliases, click analytics dashboard, and expiry management — demonstrating high-throughput RESTful API design.</div>
               <div className="proj-tech">
-                {["Go","Redis","PostgreSQL","React.js","REST APIs"].map((t) => <span key={t}>{t}</span>)}
+                {["Go","Redis","MySQL","React.js","Node.js","Vercel"].map((t) => <span key={t}>{t}</span>)}
               </div>
               <a
                 className="proj-link"
-                href="https://github.com/SayakDe98/url-shortner"
+                href="https://url-shortener-frontend-mu-blond.vercel.app"
                 target="_blank" rel="noopener noreferrer"
               >
-                Check out the Code on GitHub ↗
+                Visit Live Site ↗
               </a>
             </div>
           </div>
@@ -396,30 +394,73 @@ export default function Home() {
             <div className="section-line"></div>
           </div>
 
-          <div className="oss-grid" style={{ width: "100%" }}>
+          <div className="oss-grid" style={{ width: "100%", display: "grid", gap: "20px" }}>
+            {/* react-toastify */}
             <div className="oss-card reveal" style={{ gridColumn: "span 2", borderColor: "rgba(0,179,122,0.2)", background: "rgba(0,179,122,0.03)" }}>
               <div className="oss-header">
                 <span className="oss-icon">🍞</span>
                 <div>
-                  <div className="oss-name">react-toastify — Open PR</div>
+                  <div className="oss-name">react-toastify — Merged PR</div>
                   <div style={{ fontSize: "11px", color: "var(--accent)", marginTop: "3px", letterSpacing: "0.06em" }}>
-                    fkhadra/react-toastify · Issue open since Jan 10, 2023
+                    fkhadra/react-toastify · 5M+ weekly npm downloads
                   </div>
                 </div>
               </div>
               <div className="oss-desc" style={{ marginBottom: "16px" }}>
-                Identified and submitted a pull request addressing a long-standing bug in{" "}
+                Identified a reproducible bug open since January 2023 in{" "}
                 <strong style={{ color: "var(--text)" }}>react-toastify</strong> — one of the most widely
-                used React notification libraries on npm (5M+ weekly downloads). The underlying issue has
-                been open since <strong style={{ color: "var(--text)" }}>January 10, 2023</strong>, and
-                remains unresolved in the main repo. The PR proposes a targeted fix with full backward
+                used React notification libraries on npm. Submitted a targeted PR with full backward
                 compatibility.
               </div>
-              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "12px" }}>
                 <span style={{ fontSize: "11px", padding: "4px 12px", border: "1px solid rgba(0,179,122,0.3)", borderRadius: "2px", color: "var(--accent)" }}>React</span>
-                {["TypeScript","Bug Fix","Open PR"].map((t) => (
+                {["TypeScript","Bug Fix","PR Merged"].map((t) => (
                   <span key={t} style={{ fontSize: "11px", padding: "4px 12px", border: "1px solid var(--border)", borderRadius: "2px", color: "var(--muted)" }}>{t}</span>
                 ))}
+              </div>
+              <a href="https://github.com/fkhadra/react-toastify/pull/1281" target="_blank" rel="noopener noreferrer" className="proj-link">
+                View PR #1281 ↗
+              </a>
+            </div>
+
+            {/* kana-dojo */}
+            <div className="oss-card reveal reveal-delay-1" style={{ gridColumn: "span 2", borderColor: "rgba(100,120,255,0.2)", background: "rgba(100,120,255,0.03)" }}>
+              <div className="oss-header">
+                <span className="oss-icon">🇯🇵</span>
+                <div>
+                  <div className="oss-name">kana-dojo — Japanese Language Learning Platform</div>
+                  <div style={{ fontSize: "11px", color: "#8080ff", marginTop: "3px", letterSpacing: "0.06em" }}>
+                    lingdojo/kana-dojo · 5 Merged PRs
+                  </div>
+                </div>
+              </div>
+              <div className="oss-desc" style={{ marginBottom: "16px" }}>
+                Delivered frontend improvements across two merged PRs to an active open-source Japanese
+                language education project — demonstrating both technical contribution and genuine
+                interest in the Japanese tech ecosystem.
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "12px" }}>
+                <span style={{ fontSize: "11px", padding: "4px 12px", border: "1px solid rgba(100,120,255,0.3)", borderRadius: "2px", color: "#8080ff" }}>Frontend</span>
+                {["Education","5 PRs Merged","Japanese Market"].map((t) => (
+                  <span key={t} style={{ fontSize: "11px", padding: "4px 12px", border: "1px solid var(--border)", borderRadius: "2px", color: "var(--muted)" }}>{t}</span>
+                ))}
+              </div>
+              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+                <a href="https://github.com/lingdojo/kana-dojo/pull/11038" target="_blank" rel="noopener noreferrer" className="proj-link">
+                  View PR #11038 ↗
+                </a>
+                <a href="https://github.com/lingdojo/kana-dojo/pull/11253" target="_blank" rel="noopener noreferrer" className="proj-link">
+                  View PR #11253 ↗
+                </a>
+                 <a href="https://github.com/lingdojo/kana-dojo/pull/11376" target="_blank" rel="noopener noreferrer" className="proj-link">
+                  View PR #11376 ↗
+                </a>
+                 <a href="https://github.com/lingdojo/kana-dojo/pull/11378" target="_blank" rel="noopener noreferrer" className="proj-link">
+                  View PR #11378 ↗
+                </a>
+                 <a href="https://github.com/lingdojo/kana-dojo/pull/11517" target="_blank" rel="noopener noreferrer" className="proj-link">
+                  View PR #11517 ↗
+                </a>
               </div>
             </div>
           </div>
