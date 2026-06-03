@@ -104,7 +104,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sayak De — Full Stack Engineer</title>
-        <meta name="description" content="Frontend-led Fullstack Software Engineer · React · Vue.js · Go · AWS" />
+        <meta name="description" content="Fullstack Software Engineer · React.js · Vue.js · Go · Node.js · AWS" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -147,22 +147,23 @@ export default function Home() {
         {/* HERO */}
         <section id="hero">
           <div className="hero-glow"></div>
-          <div className="float-tag float-tag-1"><span className="dot"></span>Vue.js 3 / React</div>
+          <div className="float-tag float-tag-1"><span className="dot"></span>Vue.js / React.js</div>
           <div className="float-tag float-tag-2"><span className="dot"></span>Go</div>
+          <div className="float-tag float-tag-2"><span className="dot"></span>Node.js</div>
           <div className="float-tag float-tag-3"><span className="dot"></span>AWS</div>
 
           <div className="hero-inner">
             <div className="hero-tag">Available for opportunities</div>
             <h1 className="hero-name">Sayak<br /><em>De</em></h1>
-            <p className="hero-subtitle">Frontend-led Fullstack Engineer — React · Vue.js · Go · AWS</p>
+            <p className="hero-subtitle">Fullstack Engineer — React.js · Vue.js · Go · Node.js · AWS</p>
             <p className="hero-desc">
-              3+ years building high-impact web products at scale. I craft secure, performant
-              full-stack systems with Vue.js 3, React, Go, and AWS — from pixel-perfect UIs
+              4+ years building high-impact web products at scale. I craft secure, performant
+              full-stack systems with Vue.js 3, React, Go, Node.js and AWS — from pixel-perfect UIs
               to reliable backend APIs and payment systems.
             </p>
             <div className="hero-stats">
               {[
-                { num: "3+",    label: "Years of Experience" },
+                { num: "4+",    label: "Years of Experience" },
                 { num: "24pts", label: "DebugBear Score Lift" },
                 { num: "+20%",  label: "MAU Growth (Period Tracker)" },
                 { num: "₹1L",   label: "Monthly Cloud Savings" },
@@ -210,8 +211,8 @@ export default function Home() {
           </div>
           <div className="about-grid">
             <div className="about-text reveal">
-              <p>Hi, I&apos;m <strong>Sayak De</strong> — a Frontend-led Fullstack Software Engineer based in Howrah, India,
-                with 3+ years of production experience building secure, scalable web applications. I graduated with a
+              <p>Hi, I&apos;m <strong>Sayak De</strong> — a Fullstack Software Engineer based in Howrah, India,
+                with 4+ years of production experience building secure, scalable web applications. I graduated with a
                 B.Tech in Applied Electronics and Instrumentation Engineering from Netaji Subhash
                 Engineering College, Kolkata in 2021.</p>
               <p>I specialise in end-to-end delivery — from building intuitive Vue.js 3 / React frontends to engineering
@@ -292,15 +293,15 @@ export default function Home() {
                 <div className="tl-date">Oct 2024 – Present · Remote</div>
               </div>
               <ul className="tl-bullets">
-                <li><strong>Payment Gateway Migration:</strong> Partnered with Product, Design, and backend teams to migrate payment links from Razorpay to Juspay — re-architected the checkout API layer and updated the Nuxt 3 / Vue.js 3 payment flow; ensured <strong>zero downtime</strong> during cutover.</li>
+                <li><strong>Payment Gateway Migration:</strong> Partnered with Product, Design, and backend teams to migrate payment links from Razorpay to Juspay — re-architected the checkout API layer and updated the payment flow; ensured <strong>zero downtime</strong> during cutover.</li>
                 <li><strong>Checkout Reliability:</strong> Implemented JWT-secured transaction APIs — improved transaction reliability and reduced payment failure rate post-launch.</li>
-                <li><strong>Period Tracker — Viral Feature:</strong> Designed and shipped full-stack Vue.js 3 + Go feature in close collaboration with Product and Design; drove <strong>+20% Monthly Active User (MAU)</strong> engagement within 30 days; <strong>recognised by CEO</strong> at all-hands meeting. <span className="impact-badge">+20% MAU</span></li>
+                <li><strong>Period Tracker — Viral Feature:</strong> Designed and shipped full-stack feature in close collaboration with Product and Design; drove <strong>+20% Monthly Active User (MAU)</strong> engagement within 30 days; <strong>recognised by CEO</strong> at all-hands meeting. <span className="impact-badge">+20% MAU</span></li>
                 <li><strong>Performance Triage &amp; Optimisation:</strong> Triaged and resolved Collection Page performance issues; instrumented Sentry for error reporting and applied Redis caching — <strong>lifted DebugBear score by 24 points</strong> in a single sprint. <span className="impact-badge">+24pts perf</span></li>
                 <li><strong>CDN Cost Reduction:</strong> Integrated Gumlet for image delivery with responsive width/height optimisation — cut monthly cloud spend by <strong>~₹1,00,000/month (~$1,200 USD)</strong>; deployed assets via AWS CloudFront and AWS Route53 for low-latency global delivery. <span className="impact-badge">₹1L/month saved</span></li>
-                <li><strong>Server-Side RESTful APIs:</strong> Designed and implemented server-side APIs with Next.js for internal tooling and storefront endpoints — improved data consistency and reduced client-server round-trips.</li>
+                <li><strong>Server-Side APIs:</strong> Designed and implemented server-side APIs for internal tooling and storefront endpoints — improved data consistency and reduced client-server round-trips.</li>
                 <li><strong>Web Standards &amp; Architecture:</strong> Applied web components and island architecture for selective hydration — improved Time-to-Interactive and reduced unnecessary JavaScript execution on content-heavy pages.</li>
                 <li><strong>Subscription Flows &amp; Triage:</strong> Resolved drop-off issues in subscription flows; redesigned My Orders page and shipped Out-of-Stock recommendation engine — reduced upsell drop-off within 2 weeks; instrumented Google Analytics + WebEngage funnels informing 3 roadmap decisions.</li>
-                <li><strong>Mentorship &amp; Code Reviews:</strong> Mentored 2 junior engineers in Vue.js 3/React patterns, WCAG, and performance profiling; led weekly code-review sessions upholding software engineering best practices.</li>
+                <li><strong>Mentorship &amp; Code Reviews:</strong> Mentored 2 junior engineers in frontend patterns, WCAG, and performance profiling; led weekly code-review sessions upholding software engineering best practices.</li>
                 <li><strong>Multicultural Collaboration:</strong> Collaborated daily with colleagues distributed across India via Slack and Confluence — navigating diverse working styles in an inclusive agile squad environment.</li>
               </ul>
             </div>
@@ -316,15 +317,15 @@ export default function Home() {
                 <div className="tl-date">Jun 2022 – Sep 2024 · Pune</div>
               </div>
               <ul className="tl-bullets">
-                <li><strong>Vue.js &amp; React Frontend:</strong> Built and maintained complex UI features — multilingual video captions, interactive charts, stepper forms. Applied Storybook for component visualisation and UI testing. <span className="impact-badge">+35% engagement</span></li>
-                <li><strong>Performance Optimisation:</strong> Cut client-side load time by 30% by rewriting data-fetch orchestration in Go — replacing N+1 REST waterfalls with single batched API responses. <span className="impact-badge">-30% load time</span></li>
+                <li><strong>Frontend:</strong> Built and maintained complex UI features — multilingual video captions, interactive charts, stepper forms. Applied Storybook for component visualisation and UI testing. <span className="impact-badge">+35% engagement</span></li>
+                <li><strong>Performance Optimisation:</strong> Cut client-side load time by 30% by rewriting data-fetch orchestration — replacing N+1 waterfalls with single batched API responses. <span className="impact-badge">-30% load time</span></li>
                 <li><strong>Payments Backend:</strong> Delivered Stripe payment integration end-to-end following software engineering best practices; reduced transaction failure rate by 25%.</li>
-                <li><strong>Voice Search:</strong> Implemented Voice Search in React UI — boosted search-feature participation by 40%, the largest single engagement increase of the year. <span className="impact-badge">+40% participation</span></li>
-                <li><strong>Scalable RESTful APIs:</strong> Engineered timezone-flexible event booking API (Go + PostgreSQL) — unlocked international user segments and increased booking activity by +20%.</li>
+                <li><strong>Voice Search:</strong> Implemented Voice Search in frontend — boosted search-feature participation by 40%, the largest single engagement increase of the year. <span className="impact-badge">+40% participation</span></li>
+                <li><strong>Scalable APIs:</strong> Engineered timezone-flexible event booking API — unlocked international user segments and increased booking activity by +20%.</li>
                 <li><strong>Security &amp; Auth:</strong> Hardened authentication with JWT + granular Role-Based Access Control (RBAC), eliminating privilege-escalation vulnerabilities flagged in security audit; aligned with OWASP standards.</li>
                 <li><strong>Product Issue Triage:</strong> Triaged and resolved product issues using LLM-assisted scaffolding and GitHub Actions CI/CD pipelines — compressed average ticket cycle time from 5 days to 3 days across the team.</li>
                 <li><strong>Real-Time Features:</strong> Integrated live-chat SDK — delivered a +25% rise in daily active interactions. <span className="impact-badge">+25% activity</span></li>
-                <li><strong>API Design:</strong> Designed RESTful APIs with Next.js and OpenAPI codegen for consistent, schema-driven development.</li>
+                <li><strong>API Design:</strong> Designed APIs with OpenAPI codegen for consistent, schema-driven development.</li>
               </ul>
             </div>
           </div>
@@ -364,7 +365,7 @@ export default function Home() {
                 <div className={styles.badgeGreen}>Live</div>
               </div>
               <div className="proj-title">URL Shortener</div>
-              <div className="proj-desc">A high-performance URL shortening service achieving sub-5ms redirect resolution via Redis-first lookup with MySQL persistence. Features custom aliases, click analytics dashboard, and expiry management — demonstrating high-throughput RESTful API design.</div>
+              <div className="proj-desc">A high-performance URL shortening service achieving sub-5ms redirect resolution via Redis-first lookup with MySQL persistence. Features custom aliases, click analytics dashboard, and expiry management — demonstrating high-throughput API design.</div>
               <div className="proj-tech">
                 {["Go","Redis","MySQL","React.js","Node.js","Vercel"].map((t) => <span key={t}>{t}</span>)}
               </div>
@@ -483,7 +484,7 @@ export default function Home() {
 
           <div style={{ display: "flex", alignItems: "flex-end", gap: "20px", marginBottom: "32px" }} className="reveal">
             <div style={{ background: "var(--card)", border: "1px solid var(--border)", padding: "28px 36px", borderRadius: "4px", textAlign: "center", minWidth: "160px", width: "100%" }}>
-              <div className="lc-stat-num" style={{ fontFamily: "var(--font-syne)", fontSize: "48px", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>300+</div>
+              <div className="lc-stat-num" style={{ fontFamily: "var(--font-syne)", fontSize: "48px", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>400+</div>
               <div className="lc-stat-label" style={{ fontSize: "11px", color: "var(--muted)", letterSpacing: "0.08em", marginTop: "8px" }}>Problems Solved</div>
             </div>
           </div>
