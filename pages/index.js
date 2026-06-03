@@ -367,7 +367,7 @@ export default function Home() {
               <div className="proj-title">URL Shortener</div>
               <div className="proj-desc">A high-performance URL shortening service achieving sub-5ms redirect resolution via Redis-first lookup with MySQL persistence. Features custom aliases, click analytics dashboard, and expiry management — demonstrating high-throughput API design.</div>
               <div className="proj-tech">
-                {["Go","Redis","MySQL","React.js","Node.js","Vercel"].map((t) => <span key={t}>{t}</span>)}
+                {["Go","Redis","MySQL","React.js","Node.js"].map((t) => <span key={t}>{t}</span>)}
               </div>
               <a
                 className="proj-link"
@@ -377,6 +377,25 @@ export default function Home() {
                 Visit Live Site ↗
               </a>
             </div>
+          </div>
+
+          <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>
+              <div className="proj-first-line">
+                <div className="proj-num">03 — Active</div>
+                <div className={styles.badgeGreen}>Live</div>
+              </div>
+              <div className="proj-title">Inkwell — Writing Platform</div>
+              <div className="proj-desc">Built and deployed an ongoing full-stack writing tool in Next.js and TypeScript. Demonstrates end-to-end ownership from architecture through deployment.</div>
+              <div className="proj-tech">
+                {["Next.js","TypeScript","React.js","Vercel"].map((t) => <span key={t}>{t}</span>)}
+              </div>
+              <a
+                className="proj-link"
+                href="https://inkwell-six-coral.vercel.app"
+                target="_blank" rel="noopener noreferrer"
+              >
+                Visit Live Site ↗
+              </a>
           </div>
 
           <div style={{ marginTop: "36px" }} className="reveal reveal-delay-2">
