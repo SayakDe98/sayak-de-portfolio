@@ -1051,6 +1051,99 @@ html.light .marquee-wrap {
 
 html.light .marquee-item { color: var(--color-gray-500); }
 
+/* ── Light mode: hero orb tints ── */
+html.light .hero-orb-1 {
+  background: radial-gradient(circle, #f59e0b 0%, #fbbf24 45%, transparent 70%);
+  opacity: 0.10;
+}
+html.light .hero-orb-2 {
+  background: radial-gradient(circle, #93c5fd 0%, #bfdbfe 55%, transparent 72%);
+  opacity: 0.18;
+}
+html.light .hero-orb-3 {
+  background: radial-gradient(circle, #fde68a 0%, #fde68a 60%, transparent 76%);
+  opacity: 0.12;
+}
+
+/* ── Light mode: hero pills ── */
+html.light .hero-pill {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--color-gray-300);
+  color: var(--color-gray-500);
+}
+html.light .hero-pill:hover {
+  background: var(--color-gray-100);
+  border-color: var(--color-gray-500);
+  color: var(--color-black);
+}
+html.light .hero-pill-accent {
+  border-color: rgba(132, 105, 1, 0.35);
+  background: rgba(132, 105, 1, 0.07);
+  color: var(--accent);
+}
+html.light .hero-pill-accent:hover {
+  background: rgba(132, 105, 1, 0.14);
+  border-color: rgba(132, 105, 1, 0.55);
+}
+
+/* ── Light mode: proj-link border fix ── */
+html.light .proj-link {
+  border-color: rgba(132, 105, 1, 0.35);
+  color: var(--accent);
+}
+html.light .proj-link:hover {
+  background: var(--accent);
+  color: var(--color-white);
+  border-color: var(--accent);
+}
+
+/* ── Light mode: contact link hover ── */
+html.light .contact-link:hover {
+  background: rgba(132, 105, 1, 0.06);
+}
+
+/* ── Light mode: tl-item dot ring ── */
+html.light .tl-item::before {
+  border-color: var(--color-white);
+}
+
+/* ── Light mode: section-line color ── */
+html.light .section-line {
+  background: var(--color-gray-300);
+}
+
+/* ── Light mode: lc-diff backgrounds ── */
+html.light .lc-diff.easy {
+  background: rgba(48, 200, 94, 0.06);
+}
+html.light .lc-diff.medium {
+  background: rgba(132, 105, 1, 0.06);
+}
+html.light .lc-diff.medium .lc-diff-num {
+  color: #846901;
+}
+
+/* ── Hero mascot ── */
+.hero-mascot {
+  position: absolute;
+  right: clamp(40px, 7vw, 100px);
+  bottom: 48px;
+  width: clamp(180px, 22vw, 320px);
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.35));
+  animation: mascotFloat 4s ease-in-out infinite;
+}
+
+html.light .hero-mascot {
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.18));
+}
+
+@keyframes mascotFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-12px) rotate(1.5deg); }
+}
+
 /* ── Responsive additions ── */
 @media (max-width: 768px) {
   .skills-grid { grid-template-columns: 1fr; }
