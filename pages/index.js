@@ -222,7 +222,7 @@ export default function Home() {
 
           <div className="hero-pills">
             <span className="hero-pill">Full-Time</span>
-            <span className="hero-pill">Remote / Hybrid</span>
+            <span className="hero-pill">Remote</span>
             <a href="#contact" className="hero-pill hero-pill-accent">Get in Touch →</a>
           </div>
 
