@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { Syne, Open_Sans, Instrument_Serif } from "next/font/google";
+import { Syne, Inter, Instrument_Serif } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 const syne = Syne({
@@ -9,10 +9,11 @@ const syne = Syne({
   variable: "--font-syne",
 });
 
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  variable: "--font-open-sans",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  // Matter is KCD's custom font; Inter is the closest Google Fonts equivalent
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -24,30 +25,58 @@ const instrumentSerif = Instrument_Serif({
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("dark");
+
+  // Initialise theme from localStorage or system preference
   useEffect(() => {
-    // Custom cursor
+    const saved = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initial = saved || (prefersDark ? "dark" : "light");
+    setTheme(initial);
+    document.documentElement.classList.toggle("light", initial === "light");
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.classList.toggle("light", next === "light");
+    localStorage.setItem("theme", next);
+  };
+
+  useEffect(() => {
+    // Custom cursor — dot snaps, ring springs via RAF
     const cursor = document.getElementById("cursor");
     const trail = document.getElementById("cursor-trail");
 
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+    let rafId;
+
+    const lerp = (a, b, t) => a + (b - a) * t;
+
+    const animateTrail = () => {
+      trailX = lerp(trailX, mouseX, 0.12);
+      trailY = lerp(trailY, mouseY, 0.12);
+      trail.style.left = trailX + "px";
+      trail.style.top  = trailY + "px";
+      rafId = requestAnimationFrame(animateTrail);
+    };
+    rafId = requestAnimationFrame(animateTrail);
+
     const onMouseMove = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
       cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
-      setTimeout(() => {
-        trail.style.left = e.clientX + "px";
-        trail.style.top = e.clientY + "px";
-      }, 80);
+      cursor.style.top  = e.clientY + "px";
     };
     document.addEventListener("mousemove", onMouseMove);
 
+    const onEnter = () => document.body.classList.add("cursor-hover");
+    const onLeave = () => document.body.classList.remove("cursor-hover");
+
     document.querySelectorAll("a, button").forEach((el) => {
-      el.addEventListener("mouseenter", () => {
-        cursor.style.transform = "translate(-50%,-50%) scale(2.5)";
-        trail.style.transform = "translate(-50%,-50%) scale(1.5)";
-      });
-      el.addEventListener("mouseleave", () => {
-        cursor.style.transform = "translate(-50%,-50%) scale(1)";
-        trail.style.transform = "translate(-50%,-50%) scale(1)";
-      });
+      el.addEventListener("mouseenter", onEnter);
+      el.addEventListener("mouseleave", onLeave);
     });
 
     // Scroll reveal
@@ -95,6 +124,7 @@ export default function Home() {
     return () => {
       document.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(rafId);
       observer.disconnect();
       barObserver.disconnect();
     };
@@ -109,7 +139,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={`${syne.variable} ${openSans.variable} ${instrumentSerif.variable}`}>
+      <div className={`${syne.variable} ${inter.variable} ${instrumentSerif.variable}`}>
         <div id="cursor"></div>
         <div id="cursor-trail"></div>
 
@@ -123,13 +153,39 @@ export default function Home() {
             <li><a href="#leetcode">DSA</a></li>
             <li><a href="#contact" className="nav-cta">Hire Me</a></li>
           </ul>
-          <button
-            className={`nav-hamburger ${menuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
+          <div className="nav-right">
+            {/* Theme toggle */}
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {/* Sun — shown in dark mode */}
+              <svg className="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+              {/* Moon — shown in light mode */}
+              <svg className="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </button>
+
+            <button
+              className={`nav-hamburger ${menuOpen ? "open" : ""}`}
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
         </nav>
 
         {/* MOBILE MENU */}
@@ -145,46 +201,34 @@ export default function Home() {
         )}
 
         {/* HERO */}
-        <section id="hero">
-          <div className="hero-glow"></div>
-          <div className="float-tag float-tag-1"><span className="dot"></span>Vue.js / React.js</div>
-          <div className="float-tag float-tag-2"><span className="dot"></span>Go</div>
-          <div className="float-tag float-tag-2"><span className="dot"></span>Node.js</div>
-          <div className="float-tag float-tag-3"><span className="dot"></span>AWS</div>
+        <section id="hero" className="hero-fullbleed">
+          <div className="hero-orb hero-orb-1"></div>
+          <div className="hero-orb hero-orb-2"></div>
+          <div className="hero-orb hero-orb-3"></div>
+          <div className="hero-noise"></div>
 
-          <div className="hero-inner">
-            <div className="hero-tag">Available for opportunities</div>
-            <h1 className="hero-name">Sayak<br /><em>De</em></h1>
-            <p className="hero-subtitle">Fullstack Engineer — React.js · Vue.js · Go · Node.js · AWS</p>
-            <p className="hero-desc">
-              4+ years building high-impact web products at scale. I craft secure, performant
-              full-stack systems with Vue.js 3, React, Go, Node.js and AWS — from pixel-perfect UIs
-              to reliable backend APIs and payment systems.
-            </p>
-            <div className="hero-stats">
-              {[
-                { num: "4+",    label: "Years of Experience" },
-                { num: "24pts", label: "DebugBear Score Lift" },
-                { num: "+20%",  label: "MAU Growth (Period Tracker)" },
-                { num: "₹1L",   label: "Monthly Cloud Savings" },
-              ].map(({ num, label }) => (
-                <div key={label}>
-                  <div className="hero-stat-num">{num}</div>
-                  <div className="hero-stat-label">{label}</div>
-                </div>
-              ))}
-            </div>
-            <div className="hero-actions">
-              <a href="#contact" className="btn-primary">Get in Touch</a>
-              <a href="https://github.com/SayakDe98" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                View GitHub →
-              </a>
-            </div>
+          <div className="hero-vertical-label">
+            <span className="hero-vertical-dot"></span>
+            Available for Work
+          </div>
+
+          <div className="hero-content">
+            <h1 className="hero-display">
+              Full-Stack<br />
+              <span className="hero-display-italic">Web Dev</span>
+            </h1>
+            <p className="hero-byline">Sayak De · Howrah, India · 4+ yrs · React · Vue · Go · AWS</p>
+          </div>
+
+          <div className="hero-pills">
+            <span className="hero-pill">Full-Time</span>
+            <span className="hero-pill">Remote / Hybrid</span>
+            <a href="#contact" className="hero-pill hero-pill-accent">Get in Touch →</a>
           </div>
 
           <div className="hero-scroll">
             <div className="scroll-line"></div>
-            Scroll to explore
+            Scroll
           </div>
         </section>
 
@@ -356,7 +400,7 @@ export default function Home() {
               <div className="proj-tech">
                 {["React.js","Go","WebSocket","Redis","PostgreSQL","AWS S3","CloudFront"].map((t) => <span key={t}>{t}</span>)}
               </div>
-              <a href="http://chess-frontend-sayak.s3-website.ap-south-1.amazonaws.com" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
+              <a href="https://chess-frontend-sand.vercel.app" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
             </div>
 
             <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>

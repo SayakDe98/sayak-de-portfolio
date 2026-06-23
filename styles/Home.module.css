@@ -1,24 +1,44 @@
 /*
- * Home.module.css
- * Scoped styles that can't be expressed as plain global classes.
- * Everything else lives in portfolio.css.
+ * Home.module.css — kentcdodds.com tokens, light + dark
+ *
+ * Dark:  green-600 #68d94a, yellow-500 #ffd644
+ * Light: green-500 #30c85e, yellow     #846901 (accessible on white)
  */
 
-/* Project card "In Progress" badges */
 .badgeGreen {
-  background: rgba(0,179,122,0.1);
-  border: 1px solid rgba(0,179,122,0.25);
-  color: var(--accent);
-  font-size: 10px; letter-spacing: 0.12em;
-  padding: 4px 10px; border-radius: 100px;
+  background: rgba(104, 217, 74, 0.1);
+  border: 1px solid rgba(104, 217, 74, 0.3);
+  color: #68d94a;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: 100px;
   text-transform: uppercase;
+  transition: color 0.3s, background 0.3s, border-color 0.3s;
+}
+
+/* Light mode: use accessible green */
+:global(html.light) .badgeGreen {
+  background: rgba(48, 200, 94, 0.1);
+  border-color: rgba(48, 200, 94, 0.35);
+  color: #1a8c3e;
 }
 
 .badgePurple {
-  background: rgba(91,78,224,0.1);
-  border: 1px solid rgba(91,78,224,0.25);
-  color: var(--accent2);
-  font-size: 10px; letter-spacing: 0.12em;
-  padding: 4px 10px; border-radius: 100px;
+  background: rgba(255, 214, 68, 0.1);
+  border: 1px solid rgba(255, 214, 68, 0.3);
+  color: #ffd644;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: 100px;
   text-transform: uppercase;
+  transition: color 0.3s, background 0.3s, border-color 0.3s;
+}
+
+/* Light mode: use accessible dark-yellow */
+:global(html.light) .badgePurple {
+  background: rgba(132, 105, 1, 0.08);
+  border-color: rgba(132, 105, 1, 0.3);
+  color: #846901;
 }
