@@ -231,13 +231,11 @@ export default function Home() {
             Scroll
           </div>
 
-          <div className="hero-mascot-wrapper">
             <img
               src="/kody_skiing_flying_yellow.png"
               alt="Developer mascot"
               className="hero-mascot"
             />
-        </div>
         </section>
 
         {/* MARQUEE */}

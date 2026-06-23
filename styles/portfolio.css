@@ -1149,6 +1149,8 @@ html.light .hero-mascot {
   .skills-grid { grid-template-columns: 1fr; }
   .hero-scroll { display: none; }
   .marquee-item { padding: 0 20px; font-size: 11px; }
+  .hero-mascot { position: relative; left: 50%; }
+  .tl-header { display: block;}
 }
 
 @media (max-width: 480px) {
