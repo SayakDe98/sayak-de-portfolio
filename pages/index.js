@@ -447,10 +447,44 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 04 — Inkwell */}
+            {/* 04 — The Rainforest Canopy */}
             <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">04 — Active</div>
+                <div className={styles.badgeGreen}>Live</div>
+              </div>
+              <div className="proj-title">The Rainforest Canopy</div>
+              <div className="proj-desc">A single-page nature site built around Amazon rainforest footage — full-bleed hero video, canopy cross-section infographic, species spotlight cards, and a deforestation data visualisation.</div>
+              <div className="proj-tech">
+                {["Next.js","App Router","React.js","Vercel"].map((t) => <span key={t}>{t}</span>)}
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <a href="https://rainforest-canopy.vercel.app/" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
+                <a href="https://github.com/SayakDe98/rainforest-canopy" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
+              </div>
+            </div>
+
+            {/* 05 — The Moto Cafe */}
+            <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
+              <div className="proj-first-line">
+                <div className="proj-num">05 — Active</div>
+                <div className={styles.badgeGreen}>Live</div>
+              </div>
+              <div className="proj-title">The Moto Cafe</div>
+              <div className="proj-desc">A biker-themed café site with a custom badge logo, transformed interior photography, and warm, editorial styling built for a distinctive local brand feel.</div>
+              <div className="proj-tech">
+                {["Next.js","React.js","CSS Modules","Vercel"].map((t) => <span key={t}>{t}</span>)}
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <a href="https://moto-cafe.vercel.app/" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
+                <a href="https://github.com/SayakDe98/moto-cafe" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
+              </div>
+            </div>
+
+            {/* 06 — Inkwell */}
+            <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
+              <div className="proj-first-line">
+                <div className="proj-num">06 — Active</div>
                 <div className={styles.badgeGreen}>Live</div>
               </div>
               <div className="proj-title">Inkwell — Writing Platform</div>
