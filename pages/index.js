@@ -396,41 +396,6 @@ export default function Home() {
           </div>
 
           <div className="projects-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
-            {/* 01 — Chess Gambit */}
-            <div className="project-card reveal" style={{ position: "relative", overflow: "hidden" }}>
-              <div className="proj-first-line">
-                <div className="proj-num">01 — Active</div>
-                <div className={styles.badgeGreen}>Live</div>
-              </div>
-              <div className="proj-title">Chess Gambit</div>
-              <div className="proj-desc">A full-featured real-time multiplayer chess platform with WebSocket-driven board synchronisation handling concurrent game sessions with sub-100ms move latency. Redis-backed session state for seamless reconnect, deployed on AWS S3 with CloudFront CDN delivery.</div>
-              <div className="proj-tech">
-                {["React.js","Go","WebSocket","Redis","PostgreSQL","AWS S3","CloudFront"].map((t) => <span key={t}>{t}</span>)}
-              </div>
-              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                <a href="https://chess-frontend-sand.vercel.app" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
-                <a href="https://github.com/SayakDe98/chess-frontend" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
-              </div>
-            </div>
-
-            {/* 02 — URL Shortener */}
-            <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>
-              <div className="proj-first-line">
-                <div className="proj-num">02 — Active</div>
-                <div className={styles.badgeGreen}>Live</div>
-              </div>
-              <div className="proj-title">URL Shortener</div>
-              <div className="proj-desc">A high-performance URL shortening service achieving sub-5ms redirect resolution via Redis-first lookup with MySQL persistence. Features custom aliases, click analytics dashboard, and expiry management — demonstrating high-throughput API design.</div>
-              <div className="proj-tech">
-                {["Go","Redis","MySQL","React.js","Node.js"].map((t) => <span key={t}>{t}</span>)}
-              </div>
-              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                <a href="https://url-shortener-frontend-mu-blond.vercel.app" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
-                <a href="https://github.com/SayakDe98/url-shortener-frontend" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
-              </div>
-            </div>
-
-            {/* 03 — Wanderlust */}
             <div className="project-card reveal reveal-delay-2" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">03 — Active</div>
@@ -447,7 +412,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 04 — The Rainforest Canopy */}
             <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">04 — Active</div>
@@ -464,7 +428,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 05 — The Moto Cafe */}
             <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">05 — Active</div>
@@ -481,7 +444,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 06 — Inkwell */}
             <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">06 — Active</div>
