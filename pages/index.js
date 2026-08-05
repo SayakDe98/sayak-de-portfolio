@@ -412,6 +412,22 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="project-card reveal" style={{ position: "relative", overflow: "hidden" }}>
+              <div className="proj-first-line">
+                <div className="proj-num">02 — Active</div>
+                <div className={styles.badgeGreen}>Live</div>
+              </div>
+              <div className="proj-title">Chess Gambit</div>
+              <div className="proj-desc">An interactive chess frontend with a fully client-rendered board, legal move validation, and move history — built as a standalone React client for a chess platform.</div>
+              <div className="proj-tech">
+                {["React.js","JavaScript","CSS","Vercel"].map((t) => <span key={t}>{t}</span>)}
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <a href="https://chess-frontend-sand.vercel.app" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
+                <a href="https://github.com/SayakDe98/chess-frontend" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
+              </div>
+            </div>
+
             <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">04 — Active</div>
