@@ -396,6 +396,38 @@ export default function Home() {
           </div>
 
           <div className="projects-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+            <div className="project-card reveal" style={{ position: "relative", overflow: "hidden" }}>
+              <div className="proj-first-line">
+                <div className="proj-num">01 — Active</div>
+                <div className={styles.badgeGreen}>Live</div>
+              </div>
+              <div className="proj-title">Chess Gambit</div>
+              <div className="proj-desc">An interactive chess frontend with a fully client-rendered board, legal move validation, and move history — built as a standalone React client for a chess platform.</div>
+              <div className="proj-tech">
+                {["React.js","JavaScript","CSS","Vercel"].map((t) => <span key={t}>{t}</span>)}
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <a href="https://chess-frontend-sand.vercel.app" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
+                <a href="https://github.com/SayakDe98/chess-frontend" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
+              </div>
+            </div>
+
+            <div className="project-card reveal reveal-delay-1" style={{ position: "relative", overflow: "hidden" }}>
+              <div className="proj-first-line">
+                <div className="proj-num">02 — Active</div>
+                <div className={styles.badgeGreen}>Live</div>
+              </div>
+              <div className="proj-title">URL Shortener</div>
+              <div className="proj-desc">A URL shortening service — paste in a long URL to get a short link, and visiting that short link redirects straight to the original URL. Backend powered by an Oracle Cloud Infrastructure function.</div>
+              <div className="proj-tech">
+                {["React.js","OCI Functions","Serverless","Vercel"].map((t) => <span key={t}>{t}</span>)}
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <a href="https://tiny-u.vercel.app/" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
+                <a href="https://github.com/SayakDe98/url-shortener-frontend" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
+              </div>
+            </div>
+
             <div className="project-card reveal reveal-delay-2" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">03 — Active</div>
@@ -409,22 +441,6 @@ export default function Home() {
               <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                 <a href="https://wanderlust-travel-app-theta.vercel.app/" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
                 <a href="https://github.com/SayakDe98/wanderlust-travel-app" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
-              </div>
-            </div>
-
-            <div className="project-card reveal" style={{ position: "relative", overflow: "hidden" }}>
-              <div className="proj-first-line">
-                <div className="proj-num">02 — Active</div>
-                <div className={styles.badgeGreen}>Live</div>
-              </div>
-              <div className="proj-title">Chess Gambit</div>
-              <div className="proj-desc">An interactive chess frontend with a fully client-rendered board, legal move validation, and move history — built as a standalone React client for a chess platform.</div>
-              <div className="proj-tech">
-                {["React.js","JavaScript","CSS","Vercel"].map((t) => <span key={t}>{t}</span>)}
-              </div>
-              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                <a href="https://chess-frontend-sand.vercel.app" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
-                <a href="https://github.com/SayakDe98/chess-frontend" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
               </div>
             </div>
 
@@ -463,6 +479,22 @@ export default function Home() {
             <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
               <div className="proj-first-line">
                 <div className="proj-num">06 — Active</div>
+                <div className={styles.badgeGreen}>Live</div>
+              </div>
+              <div className="proj-title">Agentic Harness</div>
+              <div className="proj-desc">An AI assistant harness that lets users interact with an LLM-backed agent and explore the harness driving it, served by a Hugging Face model behind an Oracle Cloud Infrastructure function.</div>
+              <div className="proj-tech">
+                {["Python","Hugging Face","OCI Functions","React.js"].map((t) => <span key={t}>{t}</span>)}
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <a href="https://agentic-harness-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" className="proj-link">Visit Live Site ↗</a>
+                <a href="https://github.com/SayakDe98/Agentic-Harness-Frontend" target="_blank" rel="noopener noreferrer" className="proj-link" style={{ borderColor: "var(--border)", color: "var(--text-mid)" }}>GitHub ↗</a>
+              </div>
+            </div>
+
+            <div className="project-card reveal reveal-delay-3" style={{ position: "relative", overflow: "hidden" }}>
+              <div className="proj-first-line">
+                <div className="proj-num">07 — Active</div>
                 <div className={styles.badgeGreen}>Live</div>
               </div>
               <div className="proj-title">Inkwell — Writing Platform</div>
